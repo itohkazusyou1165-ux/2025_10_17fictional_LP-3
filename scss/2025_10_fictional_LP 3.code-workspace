@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../../Downloads/package"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "2025_10_fictional_LP 2"
+  }
+}
