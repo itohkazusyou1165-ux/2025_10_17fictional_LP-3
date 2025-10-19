@@ -45,7 +45,6 @@ body {
     border-radius: 25px;
     padding: 10px 10px;
     cursor: pointer;
-    /* === シマ―アニメーション */
     font-size: 16px;
     font-weight: bold;
     color: #333;
@@ -64,7 +63,6 @@ body {
     100% { background-position: 200% 0; }
   }
 
-/* 光の帯 (::before疑似要素で作成し、.btn に適用) */
 .btn::before {
     content: "";
     position: absolute;
@@ -242,25 +240,16 @@ body {
 
 .section-title-strength {
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: normal;
   color: #333;
   padding-bottom: 15px;
   position: relative;
   margin-bottom: 50px;
+  font-weight: bold;
 }
 
-.section-title-strength::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background-color: #90bceb;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 
 .strength-cards-container {
   display: flex;
@@ -446,24 +435,12 @@ body {
 }
 //Buzzlyが選ばれる理由
 
+
+
 .container-select {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-
-.title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #007bff;
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
-  border-radius: 2px;
 }
 
 
@@ -487,6 +464,7 @@ body {
   width: 50%;
   box-sizing: border-box;
 }
+
 
 .image-item img {
   width: 100%;
@@ -516,7 +494,9 @@ body {
   color: #555;
 }
 
-.reverse {
+
+.reason-section-reverse{
+  display: flex;
   flex-direction: row-reverse;
 }
 
@@ -528,8 +508,13 @@ body {
     text-align: center;
     align-items: center;
   }
+
+  .reason-section-reverse img{
+   padding: 100px 0;
+  }
   .image-item img {
     width: 100%;
+    margin: 0 auto;
   }
 
   .reverse {
@@ -551,6 +536,8 @@ body {
   .container-select {
     width: 100%;
    height: auto;
+   display: flex;
+   flex-direction: column;
   }
 
   .text-content h2{
@@ -565,6 +552,7 @@ body {
 
 @media (max-width: 390px) {
   .reason-section {
+    display: flex;
     flex-direction: column;
     margin-bottom: 40px;
     text-align: center;
@@ -575,7 +563,7 @@ body {
   }
 
   .reverse {
-    flex-direction: column;
+    // flex-direction: column;
   }
 
   .content-item {
@@ -793,17 +781,6 @@ body {
   margin-bottom: 50px;
 }
 
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #007bff;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 .flow-container {
   display: flex;
@@ -913,17 +890,7 @@ body {
   margin-bottom: 60px;
 }
 
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 2px;
-  background-color: #90bceb;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 
 .reason-card {
   display: flex;
@@ -1055,17 +1022,7 @@ body {
 }
 
 //料金
-.container-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 2px;
-  background-color: #90bceb;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 
 .container-plan {
   padding: 20px 0;
@@ -1113,24 +1070,32 @@ td {
   background-color: rgb(214, 210, 210);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .container-plan {
     width: 100%;
     margin: 0 auto;
   }
+  #table02 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  
+}
 }
 
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .container-plan {
     width: 100%;
-    background-color: #007bff;
     height: auto;
-    margin: 0 auto;
   }
-  #table02{
-width: 50%;
-  }
+
+
 }
+
+  
 
 //無料相談
 
