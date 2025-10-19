@@ -21,37 +21,54 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!--Googleフォント欄-->
+   
   </head>
 
   <body>
     <!---header部分-->
-    <header class="header">
-      <h1>
-        <img src="images/header_logo.png" alt="会社ロゴ" />
-      </h1>
 
-      <!---メニュー部分-->
- 
-    
-      <nav class="navi">
-        <ul class="nav-menu">
-          <li><a href="#"></a>実績</li>
-          <li><a href="#"></a>特徴</li>
-          <li><a href="#"></a>料金</li>
-          <li><a href="#"></a>よくある質問</li>
-        </ul>
-      </nav>
-      
-      <!---ボタン部分-->
+     <header class="header">
+    <h1 class="logo">
+      <a href="#"><img src="images/header_logo.png" alt="会社ロゴ" /></a>
+    </h1>
 
-      <div class="btn-download">
-        <button class="btn">資料ダウンロード</button>
-        <button class="btn">まずは無料相談</button>
-      </div>
-    </header>
+    <nav class="navi" aria-label="メインナビゲーション">
+      <ul class="nav-menu">
+        <li><a href="#assessment">実績</a></li>
+        <li><a href="#container-card">当社の強み</a></li>
+        <li><a href="#container-plan">料金</a></li>
+      </ul>
+    </nav>
 
-    
+    <div class="btn-download">
+      <button class="btn">資料ダウンロード</button>
+      <button class="btn">まずは無料相談</button>
+    </div>
+  </header>
+
+  <!-- ハンバーガーメニュー -->
+  <div class="mobile-header" aria-hidden="true">
+    <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="メニューを開く">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <!-- モバイルメニュー -->
+  <nav id="mobile-nav" class="mobile-nav" aria-hidden="true" role="navigation" aria-label="モバイルナビ">
+    <ul class="mobile-list">
+      <li><a href="#assessment">実績</a></li>
+      <li><a href="#container-card">当社の強み</a></li>
+      <li><a href="#container-plan">料金</a></li>
+    </ul>
+
+    <div class="mobile-cta">
+      <button class="btn">資料ダウンロード</button>
+      <button class="btn">まずは無料相談</button>
+    </div>
+  </nav>
+
 
     <!---画像部分-->
     <div class="header-image">
@@ -105,7 +122,7 @@
 
     <!----当社の強み-->
 
-    <div class="container-card">
+    <div class="container-card" id="container-card">
       <h2 class="section-title-strength">当社の強み</h2>
 
       <div class="strength-cards-container" id="animation-card">
@@ -165,7 +182,7 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide">
-          <section class="assessment">
+          <section id="assessment"class="assessment">
             <div class="assessment-description">
               <h3>お客様の声</h3>
               <img src="images/voice.png" alt="" />
@@ -250,7 +267,7 @@
 
       <h3 class="title">Buzzyが選ばれる理由</h3>
 
-      <!--選ばれる理由1つ目-->
+      <!---選ばれる理由1つ目-->
       <div class="reason-section section-1">
         <div class="content-item image-item">
           <img src="images/Reason.jpeg" alt="サービスのイメージ" />
@@ -299,7 +316,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
 
     <!--月額サービス説明-->
     <div class="container-description">
@@ -471,7 +488,7 @@ SNSに成果を生み出す資産に変えます<br></p>
     </div>
 
     <!---料金表-->
-    <div class="container-plan">
+    <div class="container-plan" id="container-plan">
       <h3 class="container-title">料金表</h3>
       <div class="div">
       <table id="table02">

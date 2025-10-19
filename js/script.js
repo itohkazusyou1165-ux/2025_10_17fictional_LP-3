@@ -35,6 +35,10 @@ const swiper = new Swiper(".assessment-swiper", {
   },
 });
 
+
+
+
+//光るボタン設定
 document.addEventListener("DOMContentLoaded", () => {
 
   const targets = document.querySelectorAll("#cta-text-left");
@@ -127,4 +131,56 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+//ハンバーガーメニュー設定
+
+(function () {
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (!hamburger || !mobileNav) return;
+
+  function openMenu() {
+    hamburger.classList.add('active');
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileNav.classList.add('open');
+    mobileNav.setAttribute('aria-hidden', 'false');
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileNav.classList.remove('open');
+    mobileNav.setAttribute('aria-hidden', 'true');
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', function () {
+    const opened = hamburger.classList.contains('active');
+    if (opened) closeMenu(); else openMenu();
+  });
+
+
+  mobileNav.addEventListener('click', function (e) {
+    const a = e.target.closest('a');
+    if (a && a.getAttribute('href') && a.getAttribute('href').startsWith('#')) {
+      
+      closeMenu();
+    }
+  });
+
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMenu();
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 850 && mobileNav.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+})();
 
