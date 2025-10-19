@@ -758,6 +758,7 @@ body {
 
   .text-content h2{
     font-size: 18px;
+    white-space: nowrap;
   }
 }
 
@@ -852,7 +853,7 @@ body {
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 2;
     
-    /* グラデーションで光の帯を作成 (中央が白、両端が透明) */
+  
     background: linear-gradient(
         to right,
         rgba(255, 255, 255, 0) 0%,
@@ -1033,7 +1034,7 @@ body {
   }
 }
 
-@media (max-width: 39px) {
+@media (max-width: 391px) {
   .flow-container {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1049,7 +1050,8 @@ body {
     height: 150px;
   }
   .container-setting{
-   display: block;
+   display: flex;
+   flex-direction: column;
   }
 
 .step-description {
@@ -1640,7 +1642,7 @@ td {
 //footerゾーン
 #footer a {
   text-decoration: none;
-  color: #fff;
+  color: #100000;
 }
 #footer a:hover {
   text-decoration: underline;
@@ -1783,6 +1785,14 @@ footer .navi li:first-child {
 
   .address{
     white-space: nowrap;
+  }
+  .secondary .sitenavi{
+    text-align: center;
+    margin: 0 auto;
+  }
+  .secondary .sitenavi p{
+text-align: center;
+margin: 0 auto;
   }
   
 }
