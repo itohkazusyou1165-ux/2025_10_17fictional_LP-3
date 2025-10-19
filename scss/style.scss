@@ -208,6 +208,29 @@ body {
   .problem-item {
     width: 100%;
   }
+  .section-title-problem{
+    font-size: 22px;
+  }
+  .cta-text-left{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 390px) {
+  .problem-container {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .problem-item {
+    width: 100%;
+  }
+  .section-title-problem{
+    font-size: 22px;
+  }
+  .cta-text-left{
+    font-size: 18px;
+  }
 }
 
 //当社の強み
@@ -300,7 +323,7 @@ body {
   text-align: left;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 850px) {
   .strength-cards-container {
     flex-direction: column;
     gap: 20px;
@@ -313,6 +336,19 @@ body {
   }
 }
 
+
+@media (max-width: 390px) {
+  .strength-cards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .strength-card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
 //お客さまの声ゾーン
 
 //swiper部分
@@ -390,7 +426,17 @@ body {
   color: #333;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
+  .assessment {
+    width: 35%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 390px) {
   .assessment {
     width: 50%;
     height: auto;
@@ -466,6 +512,7 @@ body {
     flex-direction: column;
     margin-bottom: 40px;
     text-align: center;
+    align-items: center;
   }
   .image-item img {
     width: 100%;
@@ -486,13 +533,55 @@ body {
   .title {
     padding: 20px 0;
   }
+ 
   .container-select {
     width: 100%;
-    height: auto;
+   height: auto;
   }
+
+  .text-content h2{
+    font-size: 18px;
+   
+
+  }
+}
+
+@media (max-width: 390px) {
+  .reason-section {
+    flex-direction: column;
+    margin-bottom: 40px;
+    text-align: center;
+    align-items: center;
+  }
+  .image-item img {
+    width: 100%;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .content-item {
+    width: 100%;
+  }
+
+  .text-item {
+    padding: 30px 20px;
+  }
+
+  .title {
+    padding: 20px 0;
+  }
+ 
   .container-select {
     width: 100%;
-    align-items: center;
+   height: auto;
+  }
+
+  .text-content h2{
+    font-size: 18px;
+   
+
   }
 }
 
@@ -601,7 +690,38 @@ body {
 
 
 /* レスポンシブ対応 */
-@media (max-width: 390px) {
+@media (max-width:767px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .text-area,
+  .image-area {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .description {
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  .image-area {
+    order: 1;
+  }
+  .text-area {
+    order: 2;
+  }
+  .img-area img{
+    width: 10px;
+    height: auto;
+  }
+  .sub-title{
+    padding: 20px;
+  }
+}
+
+@media (max-width:390px) {
   .main-content {
     flex-direction: column;
   }
@@ -734,6 +854,24 @@ body {
   }
 }
 
+@media (max-width: 390px) {
+  .flow-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .flow-item {
+    width: 45%;
+    margin-bottom: 40px;
+  }
+
+  .item-circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
 //SNSの必要性
 
 .container-need {
@@ -857,6 +995,43 @@ body {
   }
 }
 
+@media (max-width: 390px) {
+  .reason-card,
+  .reverse {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    word-break: normal;
+    justify-content: space-between;
+  }
+
+  .card-item {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .image-item {
+    order: -1;
+    padding: 0;
+  }
+
+  .text-item {
+    padding: 30px 20px;
+  }
+
+  .text-content {
+    max-width: none;
+  }
+
+  .reason-card {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    word-break: normal;
+  }
+}
+
 //料金
 
 .container-plan {
@@ -906,6 +1081,13 @@ td {
 }
 
 @media (max-width: 600px) {
+  .container-plan {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 390px) {
   .container-plan {
     width: 100%;
     margin: 0 auto;
@@ -1045,6 +1227,25 @@ td {
   }
 }
 
+@media (max-width: 390px) {
+  .contact-card {
+    padding: 40px 20px;
+  }
+
+  .consult-button {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+  .container-consultation {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  .contact-card {
+    width: 90%;
+  }
+}
+
 //問い合わせゾーン
 
 .container-contact {
@@ -1163,10 +1364,6 @@ td {
 
 
 
-
-
-
-/* レスポンシブ対応 */
 @media (max-width: 600px) {
   .form-card {
     padding: 40px 20px;
@@ -1182,6 +1379,23 @@ td {
     height: auto;
   }
 }
+
+@media (max-width: 390px) {
+  .form-card {
+    padding: 40px 20px;
+  }
+  .container-contact {
+    width: 90%;
+    height: auto;
+    padding: 20px 20px;
+    margin-bottom: 50px;
+  }
+  .form-card {
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 //footerゾーン
 #footer a {
@@ -1277,15 +1491,15 @@ footer .navi li:first-child {
   text-align: right;
 }
 
-/* 初期状態：透明で、少し下（30px）にずらしておく */
+
 #cta-text-left {
   opacity: 0;
   transform: translateY(30px);
-  /* アニメーションの時間を指定（ここでふわっとした動きを作る） */
+ 
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* JavaScriptで.is-visibleクラスが付与されたら発動 */
+
 #cta-text-left.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -1294,12 +1508,37 @@ footer .navi li:first-child {
 #animation-card {
   opacity: 0;
   transform: translateY(30px);
-  /* アニメーションの時間を指定（ここでふわっとした動きを作る） */
+
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* JavaScriptで.is-visibleクラスが付与されたら発動 */
+
 #animation-card.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+@media screen and (max-width: 780px) {
+  .navi-row .navi{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .address{
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .navi-row .navi{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .address{
+    white-space: nowrap;
+  }
 }
