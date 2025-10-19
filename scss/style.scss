@@ -414,25 +414,114 @@ body {
   color: #333;
 }
 
-@media (max-width: 850px) {
-  .assessment {
-    width: 35%;
-    height: auto;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-  }
+@media (max-width: 780px) {
+    /* --- 全体とスライドの調整 --- */
+    .assessment-swiper {
+        padding: 40px 0; /* 上下の余白を調整 */
+    }
+    .swiper-wrapper {
+        padding: 20px 0; /* PCで設定されていた大きな左右のパディングを削除 */
+    }
+    .swiper-slide {
+        /* スライドの幅を画面の90%に設定し、両端に余白を確保 */
+        width: 90% !important; 
+    }
+    
+    /* --- カード本体の調整 --- */
+    .assessment {
+        width: 100%; /* スライド内で幅いっぱいに広げる */
+        max-width: none;
+    }
+
+    /* --- テキストコンテンツの調整 --- */
+    .assessment-description {
+        padding: 30px; /* PCの44pxから削減 */
+        gap: 20px; /* 要素間の間隔を詰める */
+        font-size: 16px; /* 本文のサイズを適度に変更 */
+        line-height: 1.6; /* 行間を確保 */
+    }
+    
+    /* 評価見出しの調整 */
+    .assessment-description h3 {
+        font-size: 18px; 
+    }
+    
+    /* 引用文 (textクラス) の調整 */
+    .assessment-description .text {
+        font-size: 17px; 
+        line-height: 1.5;
+    }
+    
+    /* ナビゲーションボタンの調整 */
+    .swiper-button-prev,
+    .swiper-button-next {
+        transform: scale(0.8); /* サイズを縮小 */
+    }
+}
+@media (max-width: 390px) {
+    /* --- 全体とスライドの調整 --- */
+    .assessment-swiper {
+        padding: 20px 0;
+    }
+    .swiper-wrapper {
+        padding: 10px 0; /* 左右の余白をさらに削減 */
+    }
+    .swiper-slide {
+        /* スライドを画面幅いっぱいに設定 */
+        width: 100% !important; 
+    }
+    
+    /* --- カード本体の調整 --- */
+    .assessment {
+        /* 100%に設定されているため、そのまま */
+    }
+
+    /* --- テキストコンテンツの調整 --- */
+    .assessment-description {
+        padding: 20px 15px; /* 左右の余白を最小限に */
+        gap: 12px; /* 要素間の間隔をさらに詰める */
+        font-size: 15px; /* 本文サイズを最小限に調整 */
+        line-height: 1.7; /* 狭い画面では行間を広げて可読性UP */
+    }
+    
+    /* 評価見出しの調整 */
+    .assessment-description h3 {
+        font-size: 17px;
+    }
+    
+    /* 引用文 (textクラス) の調整 */
+    .assessment-description .text {
+        font-size: 10px; 
+    }
+
+    /* ナビゲーションボタンを非表示に（ドットナビゲーションのみ使用を推奨） */
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
 }
 
-@media (max-width: 390px) {
-  .assessment {
-    width: 50%;
-    height: auto;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-  }
-}
+
+
+// @media (max-width: 850px) {
+//   .assessment {
+//     width: 35%;
+//     height: auto;
+//     align-items: center;
+//     text-align: center;
+//     margin: 0 auto;
+//   }
+// }
+
+// @media (max-width: 390px) {
+//   .assessment {
+//     width: 50%;
+//     height: auto;
+//     align-items: center;
+//     text-align: center;
+//     margin: 0 auto;
+//   }
+// }
 //Buzzlyが選ばれる理由
 
 
@@ -562,9 +651,7 @@ body {
     width: 100%;
   }
 
-  .reverse {
-    // flex-direction: column;
-  }
+
 
   .content-item {
     width: 100%;
@@ -984,7 +1071,7 @@ body {
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .reason-card,
   .reverse {
     flex-direction: column;
@@ -1019,6 +1106,13 @@ body {
     margin: 0 auto;
     word-break: normal;
   }
+  .section-title {
+  
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
 }
 
 //料金
@@ -1086,14 +1180,47 @@ td {
 }
 }
 
-@media (max-width: 391px) {
-  .container-plan {
-    width: 100%;
-    height: auto;
+
+ @media (max-width: 390px) {
+   
+    .container {
+        padding: 0 10px;
+    }
+    
+
+    h2 {
+        font-size: 20px !important;
+    }
+    p, .text-content p {
+        font-size: 15px !important;
+    }
+
+ 
+    #table02 th {
+        font-size: 13px;
+    }
+    #table02 {
+        padding: 0;
+        display: block; 
+        width: 100%;
+    }
+    .container-plan > .div {
+        overflow-x: auto; 
+    }
+    #table02 th,
+    #table02 td {
+        width: auto !important;
+        min-width: 0 !important;
+        flex-grow: 1; 
+        flex-shrink: 1;
+        flex-basis: 0; 
+        padding: 8px 5px;
+    }
+    
   }
 
 
-}
+
 
   
 
