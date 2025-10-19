@@ -319,9 +319,42 @@ body {
   border-radius: 25px;
   padding: 10px 10px;
   cursor: pointer;
+  /* === シマ―アニメーション */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
-.header .btn:hover {
+
+.btn:hover {
   background-color: rgb(235, 241, 81);
+}
+
+@keyframes shimmer-btn {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+/* 光の帯 (::before疑似要素で作成し、.btn に適用) */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2; /* ボタン本体より上 */
+  /* グラデーションで光の帯を作成 (中央が白、両端が透明) */
+  background: linear-gradient(to right, rgba(230, 243, 1, 0) 0%, rgba(250, 250, 250, 0.7) 50%, rgba(251, 251, 3, 0) 100%);
+  background-size: 200% 100%; /* 光の帯の幅をボタンの2倍に */
+  /* アニメーション適用: 速度 4秒で無限に繰り返す */
+  animation: shimmer-btn 6s infinite linear;
 }
 
 @media (max-width: 850px) {
@@ -767,7 +800,7 @@ body {
 
 .request-button {
   display: inline-block;
-  background-color: #fcf4cf;
+  background-color: yellow;
   color: #333;
   text-decoration: none;
   font-size: 18px;
@@ -780,7 +813,23 @@ body {
 }
 
 .request-button:hover {
-  background-color: #f5e49b;
+  background-color: rgb(235, 241, 81);
+}
+
+/* 光の帯 (::before疑似要素で作成し、.btn に適用) */
+.request-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2; /* ボタン本体より上 */
+  /* グラデーションで光の帯を作成 (中央が白、両端が透明) */
+  background: linear-gradient(to right, rgba(230, 243, 1, 0) 0%, rgba(250, 250, 250, 0.7) 50%, rgba(251, 251, 3, 0) 100%);
+  background-size: 200% 100%; /* 光の帯の幅をボタンの2倍に */
+  /* アニメーション適用: 速度 4秒で無限に繰り返す */
+  animation: shimmer-btn 6s infinite linear;
 }
 
 /* レスポンシブ対応 */
@@ -1133,7 +1182,7 @@ td {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffeb9c;
+  background-color: yellow;
   color: #333;
   text-decoration: none;
   font-size: 18px;
@@ -1147,7 +1196,7 @@ td {
 }
 
 .consult-button:hover {
-  background-color: #ffc800;
+  background-color: rgb(235, 241, 81);
 }
 
 .consult-button i {
@@ -1180,7 +1229,6 @@ td {
   background-color: rgb(211, 209, 209);
 }
 
-/* 見出しの設定 */
 .section-title-form {
   text-align: center;
   font-size: 20px;
@@ -1191,7 +1239,6 @@ td {
   margin-bottom: 40px;
 }
 
-/* 見出しの下に線を作成 */
 .section-title-form::after {
   content: "";
   display: block;
@@ -1263,15 +1310,13 @@ td {
   vertical-align: middle;
 }
 
-/* 送信ボタンエリア */
 .button-area-submit {
   text-align: center;
 }
 
 .submit-button {
-  /* 緑色のボタン */
-  background-color: #87e0b5;
-  color: #ffffff;
+  background-color: yellow;
+  color: #060000;
   border: none;
   border-radius: 4px;
   font-size: 18px;
@@ -1285,7 +1330,7 @@ td {
 }
 
 .submit-button:hover {
-  background-color: #6fc998;
+  background-color: rgb(235, 241, 81);
 }
 
 /* レスポンシブ対応 */
