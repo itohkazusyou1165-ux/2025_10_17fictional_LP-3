@@ -5,10 +5,10 @@
 //header ロゴからメニュー部分
 
 body {
-  font-family: sans-serif; /* フォントを指定 */
-  margin: 0; /* bodyのデフォルトマージンをリセット */
-  padding: 20px 0; /* 上下の余白 */
-  background-color: #f8f8f8; /* 背景色を設定（画像にある薄いグレー系） */
+  font-family: sans-serif; 
+  margin: 0; 
+  padding: 20px 0; 
+  background-color: #f8f8f8;
 }
 
 .header {
@@ -69,9 +69,8 @@ body {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 2; /* ボタン本体より上 */
+    z-index: 2; 
     
-    /* グラデーションで光の帯を作成 (中央が白、両端が透明) */
     background: linear-gradient(
         to right,
         rgba(230, 243, 1, 0) 0%,
@@ -79,9 +78,9 @@ body {
         rgba(251, 251, 3, 0) 100%
     );
     
-    background-size: 200% 100%; /* 光の帯の幅をボタンの2倍に */
+    background-size: 200% 100%; 
     
-    /* アニメーション適用: 速度 4秒で無限に繰り返す */
+   
     animation: shimmer-btn 6s infinite linear;
 }
 
@@ -188,7 +187,7 @@ body {
 }
 
 .cta-logo img {
-  height: 130px;
+  height: 100px;
   width: auto;
   margin: 0 10px;
   vertical-align: middle;
@@ -209,10 +208,10 @@ body {
     width: 100%;
   }
   .section-title-problem{
-    font-size: 22px;
+    font-size: 20px;
   }
-  .cta-text-left{
-    font-size: 18px;
+  #cta-text-left{
+    font-size: 20px;
   }
 }
 
@@ -226,10 +225,10 @@ body {
     width: 100%;
   }
   .section-title-problem{
-    font-size: 22px;
+    font-size: 18px;
   }
   .cta-text-left{
-    font-size: 18px;
+    font-size: 10px;
   }
 }
 
@@ -453,9 +452,24 @@ body {
   padding: 0 20px;
 }
 
+
+.title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+
 .title {
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   padding: 40px 0 60px;
   color: #333;
@@ -509,7 +523,7 @@ body {
 //携帯の場合
 @media (max-width: 768px) {
   .reason-section {
-    flex-direction: column;
+    // flex-direction: column;
     margin-bottom: 40px;
     text-align: center;
     align-items: center;
@@ -541,8 +555,11 @@ body {
 
   .text-content h2{
     font-size: 18px;
-   
+  }
 
+  .reason-section-reverse{
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -587,6 +604,8 @@ body {
 
 //Buzzly月額定額サービス
 
+
+
 .container-description {
   max-width: 1400px;
   margin: 0 auto;
@@ -623,6 +642,8 @@ body {
   font-size: 15px;
   line-height: 2;
   color: #666;
+  margin-left: 50px;
+  
 }
 
 .image-area {
@@ -689,7 +710,7 @@ body {
 
 
 
-/* レスポンシブ対応 */
+
 @media (max-width:767px) {
   .main-content {
     flex-direction: column;
@@ -704,6 +725,7 @@ body {
   .description {
     text-align: center;
     padding: 0 40px;
+    margin: 0 auto;
   }
 
   .image-area {
@@ -1033,6 +1055,17 @@ body {
 }
 
 //料金
+.container-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #90bceb;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .container-plan {
   padding: 20px 0;
@@ -1090,7 +1123,12 @@ td {
 @media (max-width: 390px) {
   .container-plan {
     width: 100%;
+    background-color: #007bff;
+    height: auto;
     margin: 0 auto;
+  }
+  #table02{
+width: 50%;
   }
 }
 
@@ -1194,7 +1232,7 @@ td {
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 2;
     
-    /* グラデーションで光の帯を作成 (中央が白、両端が透明) */
+    
     background: linear-gradient(
         to right,
         rgba(255, 255, 255, 0) 0%,
@@ -1249,8 +1287,9 @@ td {
 //問い合わせゾーン
 
 .container-contact {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
+  border-radius: 25px;
   padding: 70px 70px;
   background-color: rgb(211, 209, 209);
 }
@@ -1389,6 +1428,7 @@ td {
     height: auto;
     padding: 20px 20px;
     margin-bottom: 50px;
+  
   }
   .form-card {
     width: 100%;
@@ -1425,6 +1465,9 @@ td {
   width: 100%;
   font-size: 26px;
   font-weight: bold;
+}
+#footer{
+  padding-top: 70px;
 }
 
 .address {
