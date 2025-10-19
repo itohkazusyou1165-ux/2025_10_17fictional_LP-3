@@ -1107,7 +1107,7 @@ body {
     height: 150px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 39px) {
   .flow-container {
     flex-wrap: wrap;
     justify-content: space-around;
