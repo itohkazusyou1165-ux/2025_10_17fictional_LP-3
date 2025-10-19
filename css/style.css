@@ -620,11 +620,11 @@ body {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(255, 255, 255);
   gap: 44px;
   width: 100%;
   height: auto;
-  padding: 44px;
+  padding: 44px 44px;
   margin: 0;
   font-size: 18px;
 }
@@ -687,7 +687,7 @@ body {
   /* --- テキストコンテンツの調整 --- */
   .assessment-description {
     padding: 30px; /* PCの44pxから削減 */
-    gap: 20px; /* 要素間の間隔を詰める */
+    gap: 25px; /* 要素間の間隔を詰める */
     font-size: 16px; /* 本文のサイズを適度に変更 */
     line-height: 1.6; /* 行間を確保 */
   }
@@ -706,7 +706,7 @@ body {
     transform: scale(0.8); /* サイズを縮小 */
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   /* --- 全体とスライドの調整 --- */
   .assessment-swiper {
     padding: 20px 0;
@@ -720,27 +720,30 @@ body {
   }
   /* --- カード本体の調整 --- */
   .assessment {
-    /* 100%に設定されているため、そのまま */
+    background-color: #000;
   }
   /* --- テキストコンテンツの調整 --- */
   .assessment-description {
-    padding: 20px 15px; /* 左右の余白を最小限に */
-    gap: 12px; /* 要素間の間隔をさらに詰める */
+    padding: 40px 40px; /* 左右の余白を最小限に */
+    gap: 15px; /* 要素間の間隔をさらに詰める */
     font-size: 15px; /* 本文サイズを最小限に調整 */
     line-height: 1.7; /* 狭い画面では行間を広げて可読性UP */
   }
   /* 評価見出しの調整 */
   .assessment-description h3 {
-    font-size: 17px;
+    font-size: 20px;
   }
   /* 引用文 (textクラス) の調整 */
   .assessment-description .text {
-    font-size: 10px;
+    font-size: 14px;
   }
   /* ナビゲーションボタンを非表示に（ドットナビゲーションのみ使用を推奨） */
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
+  }
+  .container-select {
+    padding-bottom: 35px;
   }
 }
 .container-select {
@@ -842,7 +845,7 @@ body {
     flex-direction: row;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .reason-section {
     display: flex;
     flex-direction: column;
@@ -865,6 +868,7 @@ body {
   .container-select {
     width: 100%;
     height: auto;
+    padding-top: 35px;
   }
   .text-content h2 {
     font-size: 18px;
@@ -980,7 +984,7 @@ body {
   }
   .description {
     text-align: center;
-    padding: 0 40px;
+    padding: 20px 40px;
     margin: 0 auto;
   }
   .image-area {
@@ -997,7 +1001,7 @@ body {
     padding: 20px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .main-content {
     flex-direction: column;
   }
@@ -1014,8 +1018,15 @@ body {
   .image-area {
     order: 1;
   }
-  .text-area {
+  .text-area p {
     order: 2;
+  }
+  .text-area .sub-title {
+    font-size: 20px;
+  }
+  .text-area .description {
+    font-size: 15px;
+    margin-bottom: 25px;
   }
   .img-area img {
     width: 10px;
@@ -1096,7 +1107,6 @@ body {
   color: #666;
 }
 
-/* レスポンシブ対応 */
 @media (max-width: 900px) {
   .flow-container {
     flex-wrap: wrap;
@@ -1111,7 +1121,7 @@ body {
     height: 150px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .flow-container {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1124,11 +1134,14 @@ body {
     width: 150px;
     height: 150px;
   }
+  .container-setting {
+    display: block;
+  }
 }
 .container-need {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 10px 0;
   background-color: white;
 }
 
@@ -1184,12 +1197,14 @@ body {
   font-weight: bold;
   color: #333;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .card-detail {
   font-size: 14px;
   line-height: 1.8;
   color: #666;
+  text-align: center;
 }
 
 .reverse {
@@ -1237,6 +1252,7 @@ body {
     margin: 0 auto;
     word-break: normal;
     justify-content: space-between;
+    gap: 25px;
   }
   .card-item {
     width: 100%;
