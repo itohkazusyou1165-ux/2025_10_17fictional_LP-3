@@ -489,8 +489,8 @@ body {
   .section-title-problem {
     font-size: 18px;
   }
-  .cta-text-left {
-    font-size: 10px;
+  #cta-text-left {
+    font-size: 17px;
   }
 }
 .container-card {
@@ -668,76 +668,62 @@ body {
 }
 
 @media (max-width: 780px) {
-  /* --- 全体とスライドの調整 --- */
   .assessment-swiper {
-    padding: 40px 0; /* 上下の余白を調整 */
+    padding: 40px 0;
   }
   .swiper-wrapper {
-    padding: 20px 0; /* PCで設定されていた大きな左右のパディングを削除 */
+    padding: 20px 0;
   }
   .swiper-slide {
-    /* スライドの幅を画面の90%に設定し、両端に余白を確保 */
     width: 90% !important;
   }
-  /* --- カード本体の調整 --- */
   .assessment {
-    width: 100%; /* スライド内で幅いっぱいに広げる */
+    width: 100%;
     max-width: none;
   }
-  /* --- テキストコンテンツの調整 --- */
   .assessment-description {
-    padding: 30px; /* PCの44pxから削減 */
-    gap: 25px; /* 要素間の間隔を詰める */
-    font-size: 16px; /* 本文のサイズを適度に変更 */
-    line-height: 1.6; /* 行間を確保 */
+    padding: 30px;
+    gap: 25px;
+    font-size: 16px;
+    line-height: 1.6;
   }
-  /* 評価見出しの調整 */
   .assessment-description h3 {
     font-size: 18px;
   }
-  /* 引用文 (textクラス) の調整 */
   .assessment-description .text {
     font-size: 17px;
     line-height: 1.5;
   }
-  /* ナビゲーションボタンの調整 */
   .swiper-button-prev,
   .swiper-button-next {
-    transform: scale(0.8); /* サイズを縮小 */
+    transform: scale(0.8);
   }
 }
-@media (max-width: 391px) {
-  /* --- 全体とスライドの調整 --- */
+@media (max-width: 390px) {
   .assessment-swiper {
     padding: 20px 0;
   }
   .swiper-wrapper {
-    padding: 10px 0; /* 左右の余白をさらに削減 */
+    padding: 10px 0;
   }
   .swiper-slide {
-    /* スライドを画面幅いっぱいに設定 */
     width: 100% !important;
   }
-  /* --- カード本体の調整 --- */
   .assessment {
     background-color: #000;
   }
-  /* --- テキストコンテンツの調整 --- */
   .assessment-description {
-    padding: 40px 40px; /* 左右の余白を最小限に */
-    gap: 15px; /* 要素間の間隔をさらに詰める */
-    font-size: 15px; /* 本文サイズを最小限に調整 */
-    line-height: 1.7; /* 狭い画面では行間を広げて可読性UP */
+    padding: 40px 40px;
+    gap: 15px;
+    font-size: 15px;
+    line-height: 1.7;
   }
-  /* 評価見出しの調整 */
   .assessment-description h3 {
     font-size: 20px;
   }
-  /* 引用文 (textクラス) の調整 */
   .assessment-description .text {
     font-size: 14px;
   }
-  /* ナビゲーションボタンを非表示に（ドットナビゲーションのみ使用を推奨） */
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
@@ -845,7 +831,7 @@ body {
     flex-direction: row;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 390px) {
   .reason-section {
     display: flex;
     flex-direction: column;
@@ -1001,7 +987,7 @@ body {
     padding: 20px;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 390px) {
   .main-content {
     flex-direction: column;
   }
@@ -1121,7 +1107,7 @@ body {
     height: 150px;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 390px) {
   .flow-container {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1136,6 +1122,13 @@ body {
   }
   .container-setting {
     display: block;
+  }
+  .step-description {
+    text-align: center;
+    font-size: 13px;
+  }
+  .step-title {
+    font-size: 15px;
   }
 }
 .container-need {
@@ -1243,7 +1236,7 @@ body {
     word-break: normal;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 390px) {
   .reason-card,
   .reverse {
     flex-direction: column;
@@ -1479,7 +1472,6 @@ td {
   animation: shimmer-submit 4s infinite linear;
 }
 
-/* レスポンシブ対応 */
 @media (max-width: 600px) {
   .contact-card {
     padding: 40px 20px;
