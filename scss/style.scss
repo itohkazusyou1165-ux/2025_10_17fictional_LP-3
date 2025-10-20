@@ -1,27 +1,5 @@
 @charset "UTF-8";
 
-html {
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  word-break: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-}
-
-*,
-::before,
-::after {
-  background-repeat: no-repeat;
-  box-sizing: inherit;
-}
-
-::before,
-::after {
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-
 body {
   font-family: sans-serif;
   margin: 0;
@@ -1695,4 +1673,4 @@ footer .navi li:first-child {
     text-align: center;
     margin: 0 auto;
   }
-} /*# sourceMappingURL=style.css.map */
+}
